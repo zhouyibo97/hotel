@@ -1,0 +1,124 @@
+@page_font_size:14px;
+@min_nav_font_size:12px;
+@main_nav_font_size:16px;
+body{
+    text-align: center;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    background-color: #FFF;
+}
+/*容器*/
+.container-fluid{
+    display: block;
+    width: 100%;
+}
+.container{
+    width: 1226px;
+    text-align: left;
+    margin: 0 auto;
+    font-size:@page_font_size ;
+}
+.center{
+    text-align: center;
+}
+.page_header{
+    background-color: #333333;
+    color: #FFF;
+    font-size: @min_nav_font_size;
+    clear:both;
+    overflow: hidden;
+    a{color: #B0B0B0;}
+    .header_nav{
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 0;
+        li{
+            display: inline-block;
+            font-size: @min_nav_font_size;
+            box-sizing: border-box;
+            margin-right: 8px;
+            line-height: 2.5em;
+            &:after{
+                content: "";
+                display: inline-block;
+                width: 1px;height: 1em;
+                border-right: 1px solid #B0B0B0;
+                margin-left: 18px;
+                position: relative;
+                top: 2px;
+            }
+            &:last-child{
+                &:after{
+                    display: none !important;
+                }
+            }
+        }
+        
+    }
+    .nav_left{
+        float: left;
+    }
+    .user_right{
+        float: right;
+    }
+    
+}
+.main_nav{
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin-top: 15px;
+    .logo{
+        width: 62px;height: 55px;
+        display: inline-block;
+        &>a{
+            display: block;
+            background-color: #FF6700;
+            &:after{
+                display: block;
+                content: "";
+                width: 62px;height:55px;
+                background-image: url(../img/mi-logo.png);
+                background-repeat: no-repeat;
+                background-position: 6px 3px;
+            }
+        }
+        vertical-align: middle;
+    }
+    .main_nav_ul{
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 0;
+        display: inline-block;
+        .null_box{
+            width: 145px;
+        }
+        li{
+            display: inline-block;
+            font-size: @main_nav_font_size;
+            box-sizing: border-box;
+            margin-right: 8px;
+            line-height: 2.5em;
+            
+        }
+        vertical-align: middle;
+    }
+    .search_input{
+        float:right;
+        height: 55px;
+        border: 1px solid #C0C0C0;
+        &>input{
+            border: none;
+            background: none;
+            outline: none;
+            margin: 14px 5px;
+        }
+        &>button{
+            border: none;
+            width: 55px;height: 55px;
+            margin: 0;padding: 0;
+            border-left: 1px solid #C0C0C0;
+            background:none;
+        }
+    }
+}

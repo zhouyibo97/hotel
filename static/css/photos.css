@@ -1,0 +1,161 @@
+/*相册*/
+.photo_box {
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  position: relative;
+}
+.photo_box .photo_view {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.photo_box .photo_view .photo_item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.photo_box .photo_view .photo_item > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.photo_box .photo_view .photo_item > a > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.photo_box .photo_view .photo_item.active {
+  z-index: 2;
+  opacity: 1;
+}
+.photo_box .photo_view .photo_item.prev {
+  z-index: 1;
+  opacity: 0;
+}
+.photo_box .button {
+  display: block;
+  width: 41px;
+  height: 69px;
+  background-image: url(../img/icon-slides.png);
+  background-repeat: no-repeat;
+  top: 180px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+.photo_box .button.left {
+  background-position: -84px 0;
+  left: 0;
+}
+.photo_box .button.left:hover {
+  background-position: 0 0;
+}
+.photo_box .button.right {
+  background-position: -125px 0;
+  right: 0;
+}
+.photo_box .button.right:hover {
+  background-position: -43px 0;
+}
+.photo_box .position_point {
+  display: block;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  z-index: 1000;
+}
+.photo_box .position_point .point {
+  display: inline-block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  margin-left: 15px;
+
+  
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2 ease;
+  border: 3px solid ;
+}
+.photo_box .position_point .point.active {
+  background-color: white;
+}
+.photo_box .position_point .point:hover {
+  border: 3px solid ;
+}
+/*.photoAndNav {
+  position: relative;
+}*/
+/*.photoAndNav .navLeft {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 234px;
+  z-index: 100;
+  padding: 15px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+}
+.photoAndNav .navLeft .navItem {
+  height: 43px;
+  display: block;
+  width: 100%;
+}
+.photoAndNav .navLeft .navItem .navTitle {
+  display: block;
+  height: 100%;
+  line-height: 43px;
+  color: #FFF;
+  font-family: "微软雅黑";
+  font-weight: 500;
+  text-indent: 3em;
+}
+.photoAndNav .navLeft .navItem .navTitle:hover {
+  background-color: #FF6700;
+}
+.photoAndNav .navLeft .navItem .navTitle:after {
+  content: url(../img/icon/右.png);
+  display: block;
+  float: right;
+  margin-right: 10px;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+}
+.photoAndNav .navLeft .navItem .subList {
+  display: none;
+  position: absolute;
+  left: 234px;
+  height: 100%;
+  overflow: hidden;
+  width: 710px;
+  top: 0;
+  background-color: #FFF;
+  font-size: 0;
+  white-space: normal;
+}
+.photoAndNav .navLeft .navItem .subList .subListItem {
+  display: block;
+  float: left;
+  font-size: 14px;
+  width: 234px;
+  height: 76px;
+  overflow: hidden;
+}
+.photoAndNav .navLeft .navItem:hover .subList {
+  display: block;
+}
+.photoAndNav .button.left {
+  left: 234px !important;
+}*/
+/*# sourceMappingURL=photos.css.map */

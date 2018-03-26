@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function get(url) {
+				return new Promise(function(resolve, reject) {
+					var xhr = new window.XMLHttpRequest();
+					xhr.open("get", "data.js");
+					xhr.onreadystatechange = function() {
+						if(xhr.readyState === 4) {
+							if(xhr.status == 200) {
+								console.log(xhr.response);
+							}else{
+								reject(xhr);
+							}
+						}
+					}
+					xhr.send();
+//					reject("shibai");
+				})
+			}
+			get('data.js').then(function(xhr){
+				alert("成功");
+			}).catch(function(xhr){
+				alert('失败');
+			})
+			var p2=new Promise(function(resolve,reject){
+				alert(3);
+				reject(2)
+			})
+		</script>
+	</body>
+
+</html>
